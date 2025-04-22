@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -63,6 +64,11 @@ namespace BNG {
             else {
                 ChangeHandsModel(DefaultHandsModel, false);
             }
+
+            DOVirtual.DelayedCall(1, () =>
+            {
+                ChangeHandsModel(3, false);
+            });
         }
 
         void Update() {
